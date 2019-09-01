@@ -15,3 +15,7 @@ class ListCBV(View):
 # Create your views here.
 def practice(request):
     return render(request, 'index.html')
+
+
+def pract(request):
+    return render(request, 'index.html')
