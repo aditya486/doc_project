@@ -19,3 +19,7 @@ def practice(request):
 
 def pract(request):
     return render(request, 'index.html')
+
+
+def practadi(request):
+    return render(request, 'index.html')
