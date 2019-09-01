@@ -23,3 +23,7 @@ def pract(request):
 
 def practadi(request):
     return render(request, 'index.html')
+
+
+def pracadi(request):
+    return render(request, 'index.html')
