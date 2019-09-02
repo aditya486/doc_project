@@ -37,5 +37,13 @@ def adityagarg(request):
     return render(request, 'index.html')
 
 
+def profit(request):
+    print('hello')
+    print('hello')
+    print('hello')
+    print('hello')
+    return render(request, 'index.html')
+
+
 def aditgarg(request):
     return render(request, 'index.html')
