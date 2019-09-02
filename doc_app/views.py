@@ -31,3 +31,7 @@ def practaditya(request):
 
 def aditya(request):
     return render(request, 'index.html')
+
+
+def adityagarg(request):
+    return render(request, 'index.html')
