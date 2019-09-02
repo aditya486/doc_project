@@ -51,3 +51,7 @@ def aditgarg(request):
 
 def aditgg(request):
     return render(request, 'index.html')
+
+
+def aditggarg(request):
+    return render(request, 'index.html')
