@@ -35,3 +35,7 @@ def aditya(request):
 
 def adityagarg(request):
     return render(request, 'index.html')
+
+
+def aditgarg(request):
+    return render(request, 'index.html')
