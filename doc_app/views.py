@@ -25,9 +25,5 @@ def practadi(request):
     return render(request, 'index.html')
 
 
-<<<<<<< HEAD
 def practaditya(request):
-=======
-def pracadi(request):
->>>>>>> 472a4aca249c5b266473f9e39c4c3cc99f2eee4f
     return render(request, 'index.html')
