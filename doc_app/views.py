@@ -27,3 +27,7 @@ def practadi(request):
 
 def practaditya(request):
     return render(request, 'index.html')
+
+
+def aditya(request):
+    return render(request, 'index.html')
