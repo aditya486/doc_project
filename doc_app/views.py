@@ -47,3 +47,7 @@ def profit(request):
 
 def aditgarg(request):
     return render(request, 'index.html')
+
+
+def aditgg(request):
+    return render(request, 'index.html')
