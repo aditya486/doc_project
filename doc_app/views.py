@@ -45,9 +45,5 @@ def profit(request):
     return render(request, 'index.html')
 
 
-def prit(request):
-    print('hello')
-    print('hello')
-    print('hello')
-    print('hello')
+def aditgarg(request):
     return render(request, 'index.html')
