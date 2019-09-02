@@ -43,3 +43,11 @@ def profit(request):
     print('hello')
     print('hello')
     return render(request, 'index.html')
+
+
+def prit(request):
+    print('hello')
+    print('hello')
+    print('hello')
+    print('hello')
+    return render(request, 'index.html')
