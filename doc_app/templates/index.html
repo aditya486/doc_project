@@ -6,11 +6,12 @@
           <h2>LATEST TRAILERS</h2>
           <p class="text-right"><a href="#">See all</a></p>
         </div>
-        <form method="post" class="content">
-          {% csrf_token %}
-        {{form1}} <br>
-         <br>
-        {{form2}}
+        <form method="GET" class="content" novalidate>
+          {% for field in form %}
+          <label>{{ field.label }}</label>
+        {{field}}
+        <span class="text-danger">{{ field.errors }}</span>
+        {% endfor %}
         <br>
         <br>
           <button type="submit">Login</button>

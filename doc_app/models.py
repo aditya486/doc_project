@@ -21,8 +21,8 @@ class Book(models.Model):
     author = models.ForeignKey(Person, on_delete=models.CASCADE)
     # objects = GraphManager()
 
-    # def __unicode__(self):
-    #         return self.name
+    # def __str__(self):
+    #     return self.name
 
 
 class hurricane(models.Model):

@@ -3,8 +3,9 @@ from .models import Person
 
 
 class PersonSerializer(serializers.Serializer):
-    first_name = serializers.CharField(max_length=100)
-    last_name = serializers.CharField(required=False, allow_blank=True, max_length=100)
+    first_name = serializers.CharField(max_length=100, read_only=True)
+    last_name = serializers.CharField(
+        required=False, allow_blank=True, max_length=100, read_only=True)
     birthdate = serializers.CharField(style={'base_template': 'textarea.html'})
 
     def create(self, validated_data):
@@ -17,6 +18,7 @@ class PersonSerializer(serializers.Serializer):
         """
         Update and return an existing `Snippet` instance, given the validated data.
         """
+        print(instance)
         instance.first_name = validated_data.get('first_name', instance.first_name)
         instance.last_name = validated_data.get('last_name', instance.last_name)
         instance.birthdate = validated_data.get('birthdate', instance.birthdate)
