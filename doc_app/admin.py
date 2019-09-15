@@ -1,5 +1,5 @@
 from django.contrib import admin
-from doc_app.models import Book, Person
+from doc_app.models import Book, Person, PersonManager
 
 # Register your models here.
 admin.site.register(Book)

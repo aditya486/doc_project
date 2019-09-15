@@ -19,6 +19,9 @@ from doc_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('list/<int:id>', views.ListCBV.as_view()),
-    path('prac/', views.practice),
+    path('list/<int:lool_id>', views.ListCBV.as_view()),
+    # path('prac/', views.practice, name='practice'),
+    path('widg/', views.WidgetView.as_view(), name='widg'),
+    path('snippets/', views.snippet_list),
+    path('snip/<int:pk>', views.snippet_detail)
 ]

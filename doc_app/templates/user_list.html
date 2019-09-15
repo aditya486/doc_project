@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <div class="container body">
+  <div class="main_container">
+    <div class="col-md-3 left_col menu_fixed">
+      <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+          <a href="#" class="site_title"><img src="images/logo-small.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <!-- page content -->
+    <div class="right_col" role="main">
+      <div class="wrapper">
+        <div id="table-scroll" class="table-scroll">
+          <div class="table-wrap">
+            <div class="box">
+              <div class="head">
+                <h2>LATEST TRAILERS</h2>
+                <p class="text-right"><a href="#">See all</a></p>
+              </div>
+              <form method="GET" class="content" novalidate>
+                {% for field in form %}
+                <label>{{ field.label }}</label>
+              {{field}}
+              <span class="text-danger">{{ field.errors }}</span>
+              {% endfor %}
+                <button type="submit">Login</button>
+              </form>
+              </div>
+            <table class="main-table table table-striped" id="datatable4">
+              <tfoot>
+                <tr>
+                  <td scope="col"><input class="filter" type="text"></td>
+                  <td scope="col"><input class="filter" type="text"></td>
+                  <td scope="col"><input class="filter" type="text"></td>
+                  <td scope="col"><input class="filter" type="text"></td>
+                </tr>
+              </tfoot>
+              <thead>
+                <tr>
+                  <th scope="col">Report ID</th>
+                  <th scope="col">Worksite</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for alloy in alloc %}
+                <tr>
+                  <td><a href="#">{{alloy.id}}</a></td>
+                  <td>{{alloy.name}}</td>
+                  <td>{{alloy.author.first_name}}</td>
+                  <td>{{alloy.author.last_name}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /page content -->
+  </div>
+</div>
+  {% endblock %}
