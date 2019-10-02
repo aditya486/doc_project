@@ -8,12 +8,12 @@ class PersonManager(models.Manager):
 
 class Person(models.Model):
     # objects = PersonManager()
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    birthdate = models.CharField(max_length=100)
+    start_time = models.DateTimeField()
+    end_time = models.DateTimeField()
+    birthdate = models.DateTimeField()
 
-    class Meta:
-        unique_together = (('first_name', 'last_name'),)
+    # class Meta:
+    #     unique_together = (('first_name', 'last_name'),)
 
 
 class Book(models.Model):

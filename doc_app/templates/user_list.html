@@ -22,9 +22,11 @@
               </div>
               <form method="GET" class="content" novalidate>
                 {% for field in form %}
+                {% if forloop.counter == 1 or forloop.counter == 2 %}
                 <label>{{ field.label }}</label>
               {{field}}
               <span class="text-danger">{{ field.errors }}</span>
+              {% endif %}
               {% endfor %}
                 <button type="submit">Login</button>
               </form>
